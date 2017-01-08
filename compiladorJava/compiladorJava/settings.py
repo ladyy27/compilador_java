@@ -58,7 +58,7 @@ ROOT_URLCONF = 'compiladorJava.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+                'DIRS': [os.path.join(BASE_DIR  , 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -80,9 +80,9 @@ WSGI_APPLICATION = 'compiladorJava.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'prueba',
-	'USER':'postgres',
-	'PASSWORD':'chr4d3!z',
+        'NAME': 'dbprueba',
+	'USER':'prueba',
+	'PASSWORD':'holamundo',
 	'HOST':'localhost',
 	'PORT':'5432'
     }
@@ -119,5 +119,7 @@ STATIC_ROOT = '/static/'
 #STATIC_ROOT = '/static/'
 
 #template location
-TEMPLATE_DIRS = (os.path.join(BASE_DIR,'static/templates/'),  )
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'), )
+TEMPLATE_DIRS = (os.path.join(BASE_DIR,'templates/'),  )
+TATICFILES_DIRS=(
+    os.path.join(BASE_DIR, 'static/'),
+)

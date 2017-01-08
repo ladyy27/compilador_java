@@ -1,9 +1,9 @@
 from django.conf.urls import patterns, url
 from compilador import views
 
-urlpatterns = patterns('',
-    url(r'^$', views.index, name='index'),
-    url(r'compilador/$', views.index, name='index2')
+urlpatterns = patterns('compilador.views',	
+	url(r'^$', 'index_view', name='index')
+  
     )
 
 
